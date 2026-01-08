@@ -402,8 +402,8 @@ def start_application():
         print("Autenticación fallida. No se puede continuar.")
 
 if __name__ == "__main__":
-    api_thread = threading.Thread(target=run_api)
-    api_thread.daemon = True
-    api_thread.start()
+    ##api_thread = threading.Thread(target=run_api)
+    ##api_thread.daemon = True
+    ##api_thread.start()
 
     start_application()
