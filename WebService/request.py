@@ -1,7 +1,13 @@
 import requests
+import sys
+from pathlib import Path
+
+# Agregar el directorio raíz al path para importar constants
+sys.path.append(str(Path(__file__).parent.parent))
+from Utils.constants import WEB_SERVICE_URL
 
 def call_web_service(endpoint, method='GET', data=None):
-    url = f"http://127.0.0.1:5000/{endpoint}"
+    url = f"{WEB_SERVICE_URL}/{endpoint}"
     try:
         if method == 'GET':
             response = requests.get(url, params=data)

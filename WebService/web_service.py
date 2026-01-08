@@ -2,15 +2,16 @@ from flask import Flask, request, jsonify
 import oracledb
 from datetime import datetime
 import base64
+import sys
+from pathlib import Path
+
+# Agregar el directorio raíz al path para importar constants
+sys.path.append(str(Path(__file__).parent.parent))
+from Utils.constants import DB_USER, DB_PASSWORD, DB_HOST, DB_PORT, DB_SERVICE, WEB_SERVICE_HOST, WEB_SERVICE_PORT
 
 app = Flask(__name__)
 
 # Configuración de conexión
-DB_USER = "system"
-DB_PASSWORD = "Ginnet$2026"
-DB_HOST = "192.168.18.8"
-DB_PORT = "1521"
-DB_SERVICE = "bdginnet"
 DB_CONFIG = {
     "user": DB_USER,
     "password": DB_PASSWORD,
@@ -226,7 +227,7 @@ def guardar_respuesta():
     return jsonify({"message": "Respuesta guardada correctamente"}), 201
 
 def run_api():
-    app.run(debug=False, use_reloader=False, host='0.0.0.0', port=10000)
+    app.run(debug=False, use_reloader=False, host=WEB_SERVICE_HOST, port=WEB_SERVICE_PORT)
 
 if __name__ == '__main__':
     run_api()
