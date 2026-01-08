@@ -1,0 +1,109 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Entornos virtuales
+.venv/
+venv/
+ENV/
+env/
+.env
+
+# Archivos de distribución / empaquetado
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Logs
+*.log
+logs/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Pytest
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# PyCharm
+*.iml
+.idea/
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# Archivos de sistema
+Thumbs.db
+.DS_Store
+*.bak
+*.tmp
+
+# Configuración y credenciales (IMPORTANTE)
+config.ini
+*.env
+.env.local
+credentials.json
+secrets.json
+
+# Base de datos local
+*.db
+*.sqlite
+*.sqlite3
+
+# Archivos temporales de Windows
+desktop.ini
+$RECYCLE.BIN/
+
+# Archivos de modelos ML (si son muy grandes)
+*.h5
+*.pkl
+*.pth
+*.onnx
+
+# Archivos de datos sensibles
+*.csv
+*.xlsx
+data/
+datasets/
+
+# NSSM y ejecutables
+*.exe
+nssm.exe
+
+# Certificados SSL
+*.pem
+*.key
+*.crt
+*.cert
